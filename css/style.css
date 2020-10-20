@@ -1,0 +1,170 @@
+:root {
+    --BG-color: rgb(0, 0, 0);
+    --dark-color: rgb(0, 0, 0);
+    --medium-color: rgba(41, 235, 218, 0.671);
+    --light-color: rgba(255, 255, 255, 0.397);
+
+    --TITLE-color: rgb(230, 230, 230);
+    --main-color: rgb(20, 19, 19);
+    --main-title-color: rgb(96, 165, 16);
+    --text-color: rgb(195, 194, 194);
+    --shadow-color: rgba(30, 255, 0, 0.3);
+    --hover-color: rgb(120, 196, 21);
+
+    --social-hover-color: rgb(26, 82, 9);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    background-color: var(--BG-color);
+    text-align: center;
+    padding: 1rem;
+    color: var(--TITLE-color);
+}
+
+.body {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+}
+
+.header {
+    height: 45vh;
+    background-image: linear-gradient(to top right, var(--light-color), var(--dark-color)), 
+    url('../img/gamingPC.jpg');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0%, 100% 82%, 0 95%);
+}
+
+.heading-primary-main {
+    display: block;
+    padding-top: 1.9rem;
+    font-size: 7rem;
+    letter-spacing: 0.1rem;
+    text-shadow: 0rem 0rem 2rem var(--shadow-color);
+    text-transform: uppercase;
+}
+.heading-primary-sub {
+    display: block;
+    font-size: 7rem;
+    text-shadow: 0rem 0rem 2rem var(--shadow-color);
+    text-transform: lowercase;
+}
+
+.main {
+    background-color: var(--main-color);
+    margin-top: -8rem;
+    height: 110vh;
+    padding: 10rem 2rem 3rem 2rem;/*top right bottom left*/
+}
+
+.main-text-box {
+    font-family: 'PT Sans', sans-serif;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.main-text-title {
+    display: block;
+    margin: 3rem;
+    padding: 0.5rem;
+    letter-spacing: 0.2rem;
+    font-size: 1.9rem;
+    color: var(--main-title-color);
+    transition: all 1s;
+}
+.main-text-title:hover {
+    transform: scale(1.05);
+    color: var(--hover-color);
+    text-shadow: 0rem 0rem 2rem rgba(30, 255, 0, 0.3);
+    transition: all 1s;
+    cursor: default;
+}
+
+.main-text-sub {
+    margin-top: 2rem;
+    padding: 0.2rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.8rem;
+    color: var(--text-color);
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1.2rem;
+    width: 10rem;
+    color: var(--text-color);
+    border: 2px solid var(--main-title-color);
+    padding: 0.5rem;
+    margin: 4rem;
+    outline: 0rem solid var(--shadow-color);
+    outline-offset: 0rem;
+    opacity: 1;
+    text-decoration: none;
+    /*animation-name: btn;*/
+    animation-duration: 2s;
+    animation-fill-mode: unset;
+    animation-delay: 0s;
+    transition-timing-function: ease-out;
+    transition-property: transform;
+    transition-duration: 2s;
+    transition: all 0.3s;
+}
+/*Hovering over link button*/
+.btn:hover {
+    transform: translateY(3px);
+    color: var(--hover-color);
+    outline: 0.5rem solid var(--shadow-color);
+    box-shadow: 0rem 0rem 2rem var(--shadow-color);
+    transition: all 0.3s;
+}
+img {
+    width: 320px;
+    height: 300px;
+    float: right;
+    margin: 1.2rem;
+}
+/*Button animation*/
+@keyframes btn {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+.social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-title-color);
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: all 0.3s;
+    text-decoration: none;
+    margin: 0.2rem;
+    margin-top: 1.5rem;
+    border-radius: 20%;
+    margin-bottom: 0.8rem;
+}
+.social a:hover {
+    background-color: var(--social-hover-color);
+    color: var(--hover-color);
+    border-radius: 20%;
+    transform: translateY(-4px);
+}
